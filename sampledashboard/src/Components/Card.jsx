@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default function Card(Card) {
+export default function Card(event) {
   return (
-    <div className='mt-20 h-80 w-60  bg-gradient-to-t from-green-900 to-gray-600 text-white'>
-        <h1>{Card.name}</h1>
-        <img className='h-40 w-24 bg-cover' src={Card.img}/>
-        <p className='justify-around'>{Card.description}</p>
+    <div className='p-4 text-white rounded-lg shadow-lg max-h-96h-80 w-60 bg-gradient-to-t from-green-900 to-gray-600'>
+      <h1 className='mb-2 text-lg font-bold'>{event.title}</h1>
+      <img className='object-cover w-full h-40 mb-4 rounded' src={event.img}  />
+      <p className='text-sm'>{event.description}</p>
     </div>
-  )
+  );
 }
